@@ -7,31 +7,45 @@
     tools:context=".SplashActivity">
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="106dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginEnd="106dp"
-        android:layout_marginBottom="52dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        android:id="@+id/imageView2"
+        android:layout_width="340dp"
+        android:layout_height="311dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="184dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="11dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ecg1" />
+        app:srcCompat="@drawable/logo" />
 
-    <TextView
-        android:id="@+id/textView4"
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="127dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="127dp"
-        android:layout_marginBottom="234dp"
-        android:text="Android IP"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:layout_marginStart="181dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="182dp"
+        android:layout_marginBottom="107dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="117dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="118dp"
+        android:layout_marginBottom="15dp"
+        android:text="Health Care"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
