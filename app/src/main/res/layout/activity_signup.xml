@@ -13,9 +13,10 @@
         android:hint="Enter Name"
         android:inputType="textPersonName"
         android:minHeight="48dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="98dp"
-        tools:layout_editor_absoluteY="176dp" />
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="188dp" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress3"
@@ -25,8 +26,9 @@
         android:hint="Enter E-mail"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="105dp"
+        tools:layout_editor_absoluteX="5dp"
         tools:layout_editor_absoluteY="254dp" />
 
     <EditText
@@ -37,9 +39,10 @@
         android:hint="Enter Password"
         android:inputType="textPassword"
         android:minHeight="48dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="343dp" />
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="351dp" />
 
     <EditText
         android:id="@+id/editTextTextPassword3"
@@ -49,25 +52,28 @@
         android:hint="Confirm Password"
         android:inputType="textPassword"
         android:minHeight="48dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="430dp" />
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="440dp" />
 
     <Button
         android:id="@+id/signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sign Up"
-        tools:layout_editor_absoluteX="156dp"
-        tools:layout_editor_absoluteY="529dp"
-        tools:ignore="MissingConstraints" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="131dp"
+        tools:layout_editor_absoluteY="546dp" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Register with Us"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="154dp"
-        tools:layout_editor_absoluteY="100dp" />
+        tools:layout_editor_absoluteX="83dp"
+        tools:layout_editor_absoluteY="104dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
