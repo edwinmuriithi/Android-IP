@@ -2,6 +2,7 @@ package com.example.androidip;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -19,5 +20,15 @@ public class SignupActivity extends AppCompatActivity {
         activitySignupBinding = ActivitySignupBinding.inflate(getLayoutInflater());
         View view = activitySignupBinding.getRoot();
         setContentView(view);
+
+
+        //Registration Toast
+        activitySignupBinding.signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(SignupActivity.this, "Successfully Registered", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
+
 }
