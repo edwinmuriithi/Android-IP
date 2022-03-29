@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidIp">
         <activity
+            android:name=".LoginActivity"/>
+        <activity android:name=".SearchActivity"/>
+        <activity android:name=".MainActivity"/>
+        <activity
             android:name=".SignupActivity"
             android:exported="true">
             <intent-filter>
