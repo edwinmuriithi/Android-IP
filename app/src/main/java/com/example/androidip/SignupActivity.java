@@ -1,5 +1,6 @@
 package com.example.androidip;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -27,6 +28,10 @@ public class SignupActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(SignupActivity.this, "Successfully Registered", Toast.LENGTH_SHORT).show();
+
+                //Go to next layout
+                Intent intent = new Intent(SignupActivity.this, SearchActivity.class);
+                startActivity(intent);
             }
         });
     }
