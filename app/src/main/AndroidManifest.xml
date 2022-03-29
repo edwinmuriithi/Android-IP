@@ -10,13 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidIp">
         <activity
-            android:name=".SplashActivity"
+            android:name=".SignupActivity"
             android:exported="false" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".SearchActivity" />
         <activity android:name=".MainActivity" />
         <activity
-            android:name=".SignupActivity"
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
