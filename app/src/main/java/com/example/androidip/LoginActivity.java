@@ -1,4 +1,4 @@
 package com.example.androidip;
 
-public class SignUp {
+public class LoginActivity {
 }
