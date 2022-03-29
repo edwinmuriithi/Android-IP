@@ -13,7 +13,8 @@
         android:inputType="textPersonName"
         android:hint="Enter Name"
         tools:layout_editor_absoluteX="98dp"
-        tools:layout_editor_absoluteY="176dp" />
+        tools:layout_editor_absoluteY="176dp"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress3"
@@ -23,7 +24,8 @@
         android:hint="Enter E-mail"
         android:inputType="textEmailAddress"
         tools:layout_editor_absoluteX="105dp"
-        tools:layout_editor_absoluteY="254dp" />
+        tools:layout_editor_absoluteY="254dp"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/editTextTextPassword2"
@@ -33,7 +35,8 @@
         android:hint="Enter Password"
         android:inputType="textPassword"
         tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="343dp" />
+        tools:layout_editor_absoluteY="343dp"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/editTextTextPassword3"
@@ -43,7 +46,8 @@
         android:hint="Confirm Password"
         android:inputType="textPassword"
         tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="430dp" />
+        tools:layout_editor_absoluteY="430dp"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button2"
@@ -51,5 +55,6 @@
         android:layout_height="wrap_content"
         android:text="Sign Up"
         tools:layout_editor_absoluteX="156dp"
-        tools:layout_editor_absoluteY="529dp" />
+        tools:layout_editor_absoluteY="529dp"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>
