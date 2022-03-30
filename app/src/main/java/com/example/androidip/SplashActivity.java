@@ -30,7 +30,7 @@ public class SplashActivity extends AppCompatActivity {
                 //Go to next layout
                 Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
                 startActivity(intent);
-                finish();
+                finish();//End Splash Activity 
             }
         }, 2000);//Page delays for 2 seconds
 
