@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         activityMainBinding = ActivityMainBinding.inflate(getLayoutInflater());
         View view = activityMainBinding.getRoot();
         setContentView(view);
-//        setContentView(R.layout.activity_main);
+
 
     activityMainBinding.searchagain.setOnClickListener(new View.OnClickListener() {
         @Override
