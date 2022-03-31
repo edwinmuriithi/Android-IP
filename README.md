@@ -40,6 +40,10 @@
 * Push to the branch (`git push origin improve-feature`)
 * Create a Pull Request
 
+##APK Location
+https://ufile.io/cuc6zdlf
+
+
 ## Contact Information
 [Edwin Muriithi](https://github.com/edwinmuriithi)
 
