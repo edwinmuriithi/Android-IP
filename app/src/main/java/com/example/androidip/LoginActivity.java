@@ -32,24 +32,15 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Toast.makeText(LoginActivity.this, "Logging in...", Toast.LENGTH_SHORT).show();
 
+                String string = activityLoginBinding.uname.getText().toString();
 
                 //Go to next layout
                 Intent intent = new Intent(LoginActivity.this, SearchActivity.class);
+                intent.putExtra("username", string);
                 startActivity(intent);
             }
         });
     }
-//    public void sendData() {
-//        //get the value inputted
-//        String string = uname.getText().toString();
-//
-//        //Create Intent object of this class Context
-//        Intent i = new Intent(getApplicationContext(), SearchActivity.class);
-//
-//        //putExtra puts value in key and username will receive and put the string
-//        i.putExtra("username", string);
-//        startActivity(i);
-//
-//    }
+
 
 }

@@ -25,15 +25,15 @@ public class SearchActivity extends AppCompatActivity {
         View view = activitySearchBinding.getRoot();
         setContentView(view);
 
-//        //Create get intent
-//        Intent i = getIntent();
+        //Create get intent
+        Intent i = getIntent();
 
-        //receive value by getStringExtra
-        //Key same as the one sent in login activity
-//        String string = i.getStringExtra("username");
+//        receive value by getStringExtra
+//        Key same as the one sent in login activity
+        String string = i.getStringExtra("username");
 
-//        //display string in text view
-//        activitySearchBinding.dataPass.setText("Hi!! "+ string);
+        //display string in text view
+        activitySearchBinding.dataPass.setText("Hi!! "+ string);
 
 
         //Search button Toast
@@ -47,9 +47,6 @@ public class SearchActivity extends AppCompatActivity {
             }
         });
 
-//        Intent intent = getIntent();
-//        String Uname = intent.getStringExtra("Uname");
-//        activitySearchBinding.dataPass.setText("Hi! " + Uname);
 
     }
 }
