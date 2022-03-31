@@ -1,7 +1,7 @@
 # Health Care
 * Health App
 
-##Description
+## Description
 * This is an Android Application that allows a user to search for their possible ailments according to symptoms searched for.
 
 #### Author: **EDWIN MURIITHI**
@@ -40,7 +40,7 @@
 * Push to the branch (`git push origin improve-feature`)
 * Create a Pull Request
 
-##APK Location
+## APK Location
 https://ufile.io/cuc6zdlf
 
 
