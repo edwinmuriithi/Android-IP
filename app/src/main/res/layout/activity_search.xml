@@ -28,6 +28,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="9dp"
         android:layout_marginBottom="46dp"
+        android:queryHint="@string/search"
+        android:iconifiedByDefault="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintBottom_toTopOf="@+id/search"
         app:layout_constraintEnd_toEndOf="parent"
