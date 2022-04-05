@@ -41,7 +41,7 @@
 * Create a Pull Request
 
 ## APK Location
-https://ufile.io/hdna7ued
+* IP1 -https://ufile.io/hdna7ued
 
 
 ## Contact Information
