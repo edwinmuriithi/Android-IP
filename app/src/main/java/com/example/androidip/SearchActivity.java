@@ -72,7 +72,7 @@ public class SearchActivity extends AppCompatActivity {
 
                     @Override
                     public void onFailure(Call<Model> call, Throwable t) {
-                        Log.e(TAG, "onFailure: " + t.getMessage();
+                        Log.e(TAG, "onFailure: " + t.getMessage());
 
                     }
                 });
