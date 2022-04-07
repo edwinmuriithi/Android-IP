@@ -42,7 +42,7 @@
 
 ## APK Location
 * IP1 -https://ufile.io/l2ukp8tz
-* IP2 -
+* IP2 -https://ufile.io/p0zlm24x
 
 
 ## Contact Information
