@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.androidip.databinding.ActivityLoginBinding;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -26,6 +27,14 @@ public class LoginActivity extends AppCompatActivity {
         activityLoginBinding = ActivityLoginBinding.inflate(getLayoutInflater());
         View view = activityLoginBinding.getRoot();
         setContentView(view);
+
+        //Check if user is logged in
+        if (FirebaseAuth.getInstance().getCurrentUser() != null){
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+            finish();
+
+        }
 
         activityLoginBinding.start.setOnClickListener(new View.OnClickListener() {
             @Override
