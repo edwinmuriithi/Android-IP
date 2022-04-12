@@ -50,30 +50,19 @@ public class LoginActivity extends AppCompatActivity {
         activityLoginBinding.start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(LoginActivity.this, "Logging in...", Toast.LENGTH_SHORT).show();
+                List<AuthUI.IdpConfig> provider = Arrays.asList( new AuthUI.IdpConfig.EmailBuilder().build());
 
-                String string = activityLoginBinding.uname.getText().toString();
-
-                //Go to next layout
-                Intent intent = new Intent(LoginActivity.this, SearchActivity.class);
-                intent.putExtra("username", string);
-                startActivity(intent);
-            }
-        });
-    }
-
-    public void handleLoginRegister(View view) {
-        List<AuthUI.IdpConfig> provider = Arrays.asList( new AuthUI.IdpConfig.EmailBuilder().build());
-
-        Intent intent = AuthUI.getInstance()
-                .createSignInIntentBuilder()
-                .setAvailableProviders(provider)
-                .setTosAndPrivacyPolicyUrls("", "")
-                .setLogo(R.drawable.logo)
-                .setAlwaysShowSignInMethodScreen(true)
-                .build();
+                Intent intent = AuthUI.getInstance()
+                        .createSignInIntentBuilder()
+                        .setAvailableProviders(provider)
+                        .setTosAndPrivacyPolicyUrls("", "")
+                        .setLogo(R.drawable.logo)
+                        .setAlwaysShowSignInMethodScreen(true)
+                        .build();
 
                 startActivityForResult(intent, AUTHUI_REQUEST_CODE);
+            }
+        });
     }
 
     @Override
@@ -91,7 +80,7 @@ public class LoginActivity extends AppCompatActivity {
                         Toast.makeText(this, "Welcome Back Again", Toast.LENGTH_SHORT).show();
                     }
                 Intent intent = new Intent(this, MainActivity.class);
-                    startActivity(intent)
+                    startActivity(intent);
                     this.finish();
 
             } else {
