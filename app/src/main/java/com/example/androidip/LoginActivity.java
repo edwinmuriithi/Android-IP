@@ -8,22 +8,29 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.androidip.databinding.ActivityLoginBinding;
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.auth.IdpResponse;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 import java.util.Arrays;
 import java.util.List;
 
+import cn.pedant.SweetAlert.SweetAlertDialog;
+
 public class LoginActivity extends AppCompatActivity {
 
-    private EditText uname;
+
+    String email,password;
     private Button start;
     private FirebaseAuth mAuth;
 
@@ -53,47 +60,52 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //getting the user input
-                email = binding.textEmail.getText().toString().trim();
-                pass = binding.textPassword.getText().toString().trim();
-                Toast.makeText(AuthenticationScreen.this, email + " " + pass, Toast.LENGTH_SHORT).show();
+                email = activityLoginBinding.email.getText().toString().trim();
+                password = activityLoginBinding.password.getText().toString().trim();
+                Toast.makeText(LoginActivity.this, email + " " + password, Toast.LENGTH_SHORT).show();
                 //data validation
-                if (email.isEmpty() || pass.isEmpty()){
-                    Toast.makeText(AuthenticationScreen.this, "Field(s) cannot be empty", Toast.LENGTH_SHORT).show();
+                if (email.isEmpty() || password.isEmpty()){
+                    Toast.makeText(LoginActivity.this, "Field(s) cannot be empty", Toast.LENGTH_SHORT).show();
                 } else {
-                    loginUser(email,pass);
+                    loginUser(email,password);
                 }
             }
         });
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == AUTHUI_REQUEST_CODE){
-            if (requestCode == RESULT_OK){
-                //We have signed in or have a new user
-                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                Log.d(TAG, "onActivityResult: " + user.getEmail());
-                    if (user.getMetadata().getCreationTimestamp() == user.getMetadata().getLastSignInTimestamp()){
-                        Toast.makeText(this, "Welcome new User", Toast.LENGTH_SHORT).show();
-                    }else {
-                        //This is a returning user
-                        Toast.makeText(this, "Welcome Back Again", Toast.LENGTH_SHORT).show();
-                    }
-                Intent intent = new Intent(this, MainActivity.class);
-                    startActivity(intent);
-                    this.finish();
+    private void loginUser(String email, String password) {
+        //giving user progress
+        SweetAlertDialog progressDialog = new SweetAlertDialog(LoginActivity.this, SweetAlertDialog.PROGRESS_TYPE);
+        progressDialog.setTitleText("Signing in.. Please wait");
+        progressDialog.setCancelable(true);
+        progressDialog.setCanceledOnTouchOutside(false);
+        progressDialog.show();
 
-            } else {
-                //sign in failed
-                IdpResponse response = IdpResponse.fromResultIntent(data);
-                
-                if (response == null){
-                    Log.d(TAG, "onActivityResult:  the user has cancelled sign in request");
-                } else {
-                    Log.e(TAG, "onActivityResult: ", response.getError() );
+        mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()) {
+                    progressDialog.dismiss();
+                    SweetAlertDialog successDialog = new SweetAlertDialog(LoginActivity.this, SweetAlertDialog.SUCCESS_TYPE);
+                    successDialog.setTitleText("Account Verified" + task.isSuccessful());
+                    successDialog.setCancelable(true);
+                    successDialog.show();
+                    updateUi();
+                } else if (!task.isSuccessful()) {
+                    progressDialog.dismiss();
+                    SweetAlertDialog errorDialog = new SweetAlertDialog(LoginActivity.this, SweetAlertDialog.ERROR_TYPE);
+                    errorDialog.setTitleText("Error in signing in");
+                    errorDialog.setCancelable(true);
+                    errorDialog.setCanceledOnTouchOutside(false);
+                    errorDialog.show();
                 }
             }
-        }
+        });
     }
+
+    private void updateUi() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
 }
