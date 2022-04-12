@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.androidip.databinding.ActivityLoginBinding;
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.auth.IdpResponse;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -24,9 +25,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private EditText uname;
     private Button start;
-
-    private static final String TAG = "LoginActivity";
-    int AUTHUI_REQUEST_CODE = 1314;
+    private FirebaseAuth mAuth;
 
     //Binding Class
     private ActivityLoginBinding activityLoginBinding;
@@ -39,6 +38,9 @@ public class LoginActivity extends AppCompatActivity {
         View view = activityLoginBinding.getRoot();
         setContentView(view);
 
+        FirebaseApp.initializeApp(this);
+        mAuth = FirebaseAuth.getInstance();
+
         //Check if user is logged in
         if (FirebaseAuth.getInstance().getCurrentUser() != null){
             Intent intent = new Intent(this, MainActivity.class);
@@ -50,17 +52,16 @@ public class LoginActivity extends AppCompatActivity {
         activityLoginBinding.start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                List<AuthUI.IdpConfig> provider = Arrays.asList( new AuthUI.IdpConfig.EmailBuilder().build());
-
-                Intent intent = AuthUI.getInstance()
-                        .createSignInIntentBuilder()
-                        .setAvailableProviders(provider)
-                        .setTosAndPrivacyPolicyUrls("", "")
-                        .setLogo(R.drawable.logo)
-                        .setAlwaysShowSignInMethodScreen(true)
-                        .build();
-
-                startActivityForResult(intent, AUTHUI_REQUEST_CODE);
+                //getting the user input
+                email = binding.textEmail.getText().toString().trim();
+                pass = binding.textPassword.getText().toString().trim();
+                Toast.makeText(AuthenticationScreen.this, email + " " + pass, Toast.LENGTH_SHORT).show();
+                //data validation
+                if (email.isEmpty() || pass.isEmpty()){
+                    Toast.makeText(AuthenticationScreen.this, "Field(s) cannot be empty", Toast.LENGTH_SHORT).show();
+                } else {
+                    loginUser(email,pass);
+                }
             }
         });
     }

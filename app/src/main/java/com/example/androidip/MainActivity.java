@@ -37,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
     });
+
+
         //recycler Constructor
         recyclerAdapter = new RecyclerAdapter();
 
