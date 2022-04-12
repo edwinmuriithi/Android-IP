@@ -7,15 +7,23 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.androidip.databinding.ActivityLoginBinding;
+import com.firebase.ui.auth.AuthUI;
 import com.google.firebase.auth.FirebaseAuth;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class LoginActivity extends AppCompatActivity {
 
     private EditText uname;
     private Button start;
+
+    private static final String TAG = "LoginActivity";
+    int AUTHUI_REQUEST_CODE = 1314;
 
     //Binding Class
     private ActivityLoginBinding activityLoginBinding;
@@ -51,5 +59,23 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    public void handleLoginRegister(View view) {
+        List<AuthUI.IdpConfig> provider = Arrays.asList( new AuthUI.IdpConfig.EmailBuilder().build());
 
+        Intent intent = AuthUI.getInstance()
+                .createSignInIntentBuilder()
+                .setAvailableProviders(provider)
+                .setTosAndPrivacyPolicyUrls("", "")
+                .build();
+
+                startActivityForResult(intent, AUTHUI_REQUEST_CODE);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == AUTHUI_REQUEST_CODE){
+
+        }
+    }
 }
