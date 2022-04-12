@@ -10,103 +10,89 @@
         android:id="@+id/editTextTextPersonName4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="39dp"
-        android:layout_marginEnd="6dp"
         android:ems="10"
         android:hint="Enter Name"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+
         app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress3"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="6dp"
         android:ems="10"
         android:hint="Enter E-mail"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
 
     <EditText
         android:id="@+id/editTextTextPassword2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="6dp"
-        android:layout_marginBottom="14dp"
         android:ems="10"
         android:hint="Enter Password"
         android:inputType="textPassword"
         android:minHeight="48dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword3"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress3"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress3" />
 
     <EditText
         android:id="@+id/editTextTextPassword3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="6dp"
-        android:layout_marginBottom="40dp"
         android:ems="10"
         android:hint="Confirm Password"
         android:inputType="textPassword"
         android:minHeight="48dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+
         app:layout_constraintBottom_toTopOf="@+id/signup"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
 
     <Button
         android:id="@+id/signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="131dp"
-        android:layout_marginTop="33dp"
-        android:layout_marginEnd="132dp"
-        android:layout_marginBottom="120dp"
         android:text="Sign Up"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword3"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword3" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="83dp"
-        android:layout_marginTop="104dp"
-        android:layout_marginEnd="84dp"
-        android:layout_marginBottom="39dp"
         android:text="Register with Us"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName4"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
