@@ -11,7 +11,7 @@ import android.view.View;
 
 import com.example.androidip.databinding.ActivityMainBinding;
 import com.example.androidip.databinding.ActivitySearchBinding;
-import com.example.androidip.databinding.MenuMainBinding;
+
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.lang.reflect.Array;
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     //Binding Class
      private ActivityMainBinding activityMainBinding;
      RecyclerAdapter recyclerAdapter;
-     private MenuMainBinding menuMainBinding;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,11 +59,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        menuMainBinding = MenuMainBinding.inflate(getMenuInflater());
-        return super.onCreateOptionsMenu(menu);
-    }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
