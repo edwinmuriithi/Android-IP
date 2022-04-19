@@ -1,11 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <?xml version="1.0" encoding="utf-8"?>
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
@@ -39,7 +32,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tvLoginEmail"
+            android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -57,7 +50,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tvLoginPassword"
+            android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -73,10 +66,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvLoginEmail" />
+            app:layout_constraintTop_toBottomOf="@+id/email" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/clContinue"
+            android:id="@+id/login"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_marginStart="24dp"
@@ -90,7 +83,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Continue"
+                android:text="Login"
                 android:textAlignment="center"
                 android:textColor="#ffffff"
                 android:textSize="25dp"
@@ -109,8 +102,8 @@
             android:layout_marginTop="8dp"
             android:text="Forgot your password?"
             android:textColor="@color/colorWhite"
-            app:layout_constraintEnd_toEndOf="@+id/tvLoginPassword"
-            app:layout_constraintTop_toBottomOf="@+id/tvLoginPassword" />
+            app:layout_constraintEnd_toEndOf="@+id/password"
+            app:layout_constraintTop_toBottomOf="@+id/password" />
 
         <TextView
             android:id="@+id/textView5"
@@ -120,14 +113,14 @@
             android:layout_marginEnd="16dp"
             android:text="Don't have an account? "
             android:textColor="@color/colorWhite"
-            app:layout_constraintEnd_toStartOf="@+id/tvSignUp"
+            app:layout_constraintEnd_toStartOf="@+id/signup1"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/clContinue" />
+            app:layout_constraintTop_toBottomOf="@+id/login" />
 
         <TextView
-            android:id="@+id/tvSignUp"
+            android:id="@+id/signup1"
             style="@style/Underline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -146,4 +139,3 @@
         app:layout_constraintTop_toTopOf="@+id/textView5" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
