@@ -6,12 +6,13 @@
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.19" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.19" />
         <entry key="app/src/main/res/drawable/roundbutton.xml" value="0.2575" />
+        <entry key="app/src/main/res/drawable/underline.xml" value="0.298" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/activity_login2.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/activity_reset_password.xml" value="0.2520833333333333" />
         <entry key="app/src/main/res/layout/activity_search.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/activity_signup.xml" value="0.18177083333333333" />
+        <entry key="app/src/main/res/layout/activity_signup.xml" value="0.12" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.18229166666666666" />
         <entry key="app/src/main/res/layout/login.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/menu_main.xml" value="0.23229166666666667" />

@@ -21,5 +21,10 @@
         <item name="android:background">@color/colorStandardBlack</item>
         <item name="android:theme">@color/colorDarkBlue</item>
     </style>
+    <!--    to underline-->
+    <style name="Underline">
+        <item name="android:textColor">@color/orange</item>
+        <item name="android:background">@drawable/underline</item>
+    </style>
 </resources>
 

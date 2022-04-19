@@ -27,6 +27,7 @@
 * Gradle
 * ViewBinding
 * Junit
+* Firebase
 
 ## Want to contribute? Great!
 
