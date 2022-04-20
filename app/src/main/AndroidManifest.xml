@@ -14,11 +14,13 @@
         android:theme="@style/Theme.AndroidIp"
         tools:replace="android:icon">
         <activity
-            android:name=".ResetPassword"
+            android:name=".Animation"
             android:exported="false" />
-<!--        <activity-->
-<!--            android:name=".SignupActivity"-->
-<!--            android:exported="false" />-->
+        <activity
+            android:name=".ResetPassword"
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".SignupActivity" -->
+        <!-- android:exported="false" /> -->
         <activity android:name=".LoginActivity" />
         <activity android:name=".SearchActivity" />
         <activity android:name=".MainActivity" />
