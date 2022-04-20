@@ -76,11 +76,11 @@ public class LoginActivity extends AppCompatActivity {
 
         };
 
-        activityLoginBinding.login.setOnClickListener(new View.OnClickListener() {
+        activityLoginBinding.clContinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                email = activityLoginBinding.email.getText().toString().trim();
-                password = activityLoginBinding.password.getText().toString().trim();
+                email = activityLoginBinding.tvLoginEmail.getText().toString().trim();
+                password = activityLoginBinding.tvLoginPassword.getText().toString().trim();
 
                 Toast.makeText(LoginActivity.this, email + " " + password, Toast.LENGTH_SHORT).show();
                 //data validation
@@ -92,7 +92,7 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         });
-        activityLoginBinding.signup1.setOnClickListener(new View.OnClickListener() {
+        activityLoginBinding.tvSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(LoginActivity.this, SignupActivity.class);
