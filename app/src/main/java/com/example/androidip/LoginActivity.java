@@ -37,8 +37,6 @@ public class LoginActivity extends AppCompatActivity {
     String email,password;
     private Button login;
 
-
-    //Binding Class
     private ActivityLoginBinding activityLoginBinding;
     private FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener firebaseAuthListener;
@@ -55,6 +53,8 @@ public class LoginActivity extends AppCompatActivity {
         activityLoginBinding = ActivityLoginBinding.inflate(getLayoutInflater());
         View view = activityLoginBinding.getRoot();
         setContentView(view);
+
+
         firebaseAuth = FirebaseAuth.getInstance();
 
         firebaseAuthListener = new FirebaseAuth.AuthStateListener() {

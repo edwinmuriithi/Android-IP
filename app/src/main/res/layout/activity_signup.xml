@@ -3,9 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/black"
-    tools:context=".SignupActivity">
+    android:layout_height="match_parent">
+
 
 
     <TextView
@@ -14,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
         android:text="CREATE ACCOUNT"
-        android:textColor="@color/colorCyanBlue"
+        android:textColor="@color/orange"
         android:textSize="32sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,78 +21,77 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/Sname"
+        android:id="@+id/tvSignUpName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="16dp"
         android:height="40dp"
-        android:background="@color/colorWhite"
+        android:background="@color/orange"
         android:hint="Enter your name"
         android:padding="8dp"
-        android:textColor="@android:color/black"
-        android:textColorHint="@color/black"
+        android:textColor="@android:color/white"
+        android:textColorHint="@color/white"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvSignUpTitle" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/Spassword"
+        android:id="@+id/tvSignUpPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         android:height="40dp"
-        android:background="@color/colorWhite"
+        android:background="@color/orange"
         android:hint="Enter your password"
-        android:textColor="@android:color/black"
         android:inputType="textPassword"
         android:padding="8dp"
-        android:textColorHint="@color/black"
+        android:textColorHint="@color/white"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Semail" />
+        app:layout_constraintTop_toBottomOf="@+id/tvSignUpEmail" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/Scpassword"
+        android:id="@+id/tvSignUpConfirmPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         android:height="40dp"
-        android:background="@color/colorWhite"
+        android:background="@color/orange"
         android:hint="Confirm password"
-        android:padding="8dp"
         android:inputType="textPassword"
-        android:textColor="@android:color/black"
-        android:textColorHint="@color/black"
+        android:padding="8dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@color/white"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Spassword" />
+        app:layout_constraintTop_toBottomOf="@+id/tvSignUpPassword" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/Semail"
+        android:id="@+id/tvSignUpEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         android:height="40dp"
-        android:background="@color/colorWhite"
+        android:background="@color/orange"
         android:hint="Enter your email"
         android:padding="8dp"
-        android:textColor="@android:color/black"
-        android:textColorHint="@color/black"
+        android:textColor="@android:color/white"
+        android:textColorHint="@color/white"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Sname" />
+        app:layout_constraintTop_toBottomOf="@+id/tvSignUpName" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/clSignUpCreateAccount"
@@ -102,14 +100,14 @@
         android:layout_marginStart="72dp"
         android:layout_marginEnd="72dp"
         android:layout_marginBottom="32dp"
-        android:background="@drawable/red_button_background"
+        android:background="@drawable/orange_button_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Scpassword">
+        app:layout_constraintTop_toBottomOf="@+id/tvSignUpConfirmPassword">
 
         <TextView
-            android:id="@+id/signup"
+            android:id="@+id/tvSignUpCreateAccount"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="center|center_horizontal|center_vertical"
@@ -131,55 +129,26 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:text="Already have an account?"
-        android:textColor="@color/colorCyanBlue"
+        android:textColor="@color/orange"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/login1"
+        app:layout_constraintEnd_toStartOf="@+id/tvSignUpSignIn"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/login1"
+        android:id="@+id/tvSignUpSignIn"
         style="@style/Underline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:text="Sign in"
-        android:textColor="@color/colorCyanBlue"
+        android:textColor="@color/orange"
         app:layout_constraintBottom_toBottomOf="@+id/textView8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView8"
         app:layout_constraintTop_toTopOf="@+id/textView8" />
-
-    <!--    <ProgressBar-->
-    <!--        android:id="@+id/pbSignInProgressBar"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_centerInParent="true"-->
-    <!--        android:visibility="gone"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--        app:layout_constraintBottom_toStartOf="@+id/tvLoadingSignUp"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toTopOf="parent" />-->
-
-    <!--    <TextView-->
-    <!--        android:id="@+id/tvLoadingSignUp"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_below="@+id/pbSignInProgressBar"-->
-    <!--        android:layout_centerInParent="true"-->
-    <!--        android:layout_margin="20dp"-->
-    <!--        android:layout_marginTop="8dp"-->
-    <!--        android:textColor="@color/colorPrimaryText"-->
-    <!--        android:visibility="gone"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintHorizontal_bias="0.5"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/pbSignInProgressBar" />-->
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
